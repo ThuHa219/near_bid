@@ -12,9 +12,9 @@
 
 <body style="align-items: center;">
     <main id="signed-out-flow" style="display: none">
-        <h1>Welcome to NEAR Messaging Service on NEAR!</h1>
+        <h1>Welcome to Messenger on NEAR!</h1>
         <p>
-            To make use NEAR Messaging Service on NEAR blockchain, you need to sign in. The button
+            To make use Messenger on NEAR blockchain, you need to sign in. The button
             below will sign you in using NEAR Wallet.
         </p>
         <p>
@@ -33,7 +33,7 @@
 
     <div id="signed-in-flow" style="display: none; border: 1px solid #cccccc;background-color: rgb(239,239,239);">
         <div class="header">
-            <span><strong>NEAR Messaging Service</strong></span>
+            <span><strong>Near Messenger</strong></span>
             <button class="link" style="float: right; padding: 0px; color: black;" id="sign-out-button">
                 <u>Sign out</u>
             </button>
@@ -51,8 +51,8 @@
             <div class="div-row">
                 <div class="div-column1" style="background-color: aqua;">
                     <div style="text-align: center; padding: 5px;">
-                        <button style="padding: 0px; color: black; background-color: rgb(53, 205, 211); padding: 5px; width: 100%;" id="sign-out-button" onclick="onClickMenuItem('compose');">
-                            Compose
+                        <button style="padding: 0px; color: rgb(8, 67, 161); background-color: rgb(235, 251, 252); padding: 5px; width: 100%;" id="sign-out-button" onclick="onClickMenuItem('compose');">
+                            New Message
                         </button>
                     </div>
                     <div style="border: #cccccc solid 1px; margin: 5px;">
@@ -78,7 +78,7 @@
                                 <input type="hidden" id="originMsgId" data-behavior="originMsgId" value="-1" />
                                 <div>
                                     <label for="toAccount" style="display: block; color: var(--gray); margin-bottom: 0.5em">
-                                        To Account
+                                        To AccountID
                                     </label>
                                     <div style="display: flex">
                                         <input style="flex: 1" autocomplete="off" id="toAccount" data-behavior="toAccount" maxlength="50" />
@@ -128,10 +128,7 @@
         <div class="footer" style="font-size: small;">
             <span id="staticsInfo">&nbsp;</span>
             
-            <span id="sourcecode-github" style="float: right; margin-right: 20px;"><a class="sms-link" href="https://github.com/Learn-NEAR-Club/nms" target="_blank">Source Code</a></span>
-            <span id="list-join-lnc" style="float: right; margin-right: 20px;"><a class="sms-link" href="https://kiemtienonline360.com/go/learner-near" target="_blank">Join LNC</a></span>
-            <span id="list-join-lnc" style="float: right; margin-right: 20px;"><a class="sms-link" href="https://nms-v1.kiemtienonline360.com" target="_blank">NMS V1.0</a></span>
-        </div>
+            </div>
     </div>
 
     <aside data-behavior="notification" style="display: none">

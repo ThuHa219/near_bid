@@ -179,13 +179,13 @@ export function sendMessage(to: string, title: string, data: string, baseSite: s
 
     // Store StaticInfo
     staticsInfos.set(STATICS_KEY, staticsInfo);
-
+    
     // Send NEAR to receiver
-    if (!attachedDeposit.isZero()) {
-        let userAmount = Number(attachedDeposit)*Number(staticsInfo.userRate)/(1000);
-        ContractPromiseBatch.create(to).transfer(u128.from(userAmount));
-        let feeAmount = Number(attachedDeposit) - userAmount;
-        ContractPromiseBatch.create(staticsInfo.feeAddress).transfer(u128.from(feeAmount));
+    if (!attachedDeposit.isZero()) {                                                            //@ts-ignore
+        let userAmount = attachedDeposit*staticsInfo.userRate/u128.from(1000);                  //@ts-ignore
+        ContractPromiseBatch.create(to).transfer(userAmount);                                   //@ts-ignore
+        let feeAmount = (attachedDeposit) - userAmount;                                         //@ts-ignore
+        ContractPromiseBatch.create(staticsInfo.feeAddress).transfer(feeAmount);
     }
 
     return true;
