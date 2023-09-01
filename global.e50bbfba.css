@@ -9,7 +9,7 @@ html {
   --light-gray: #ccc;
   --shadow: #e6e6e6;
   --success: rgb(90, 206, 132);
-  --primary: #FF585D;
+  --primary: #c5595c;
   --secondary: #0072CE;
 
   background-color: var(--bg);
@@ -30,7 +30,7 @@ main {
 }
 
 .header {
-  background-color: #00FF53;
+  background-color: #8837b0;
   padding: 5px;
   border-bottom: solid 1px #cccccc;
   color: black;
